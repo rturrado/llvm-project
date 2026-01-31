@@ -25,7 +25,6 @@
 static std::counting_semaphore<> s(0);
 constexpr auto num_acquirer   = 100;
 constexpr auto num_iterations = 5000;
-static std::barrier<> b(num_acquirer + 1);
 
 void acquire() {
   for (int i = 0; i < num_iterations; ++i) {
